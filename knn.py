@@ -33,7 +33,7 @@ class KNearestNeighbors:
         self.features = x
         self.labels = y
 
-    def predict(self, x, neighbors=5, metrics='euclidean') -> np.array:
+    def predict(self, x, neighbors=5, metrics='euclidean') -> list:
         if neighbors >= len(x):
             raise Exception('Number of neighbors is greater or equal to total number of samples')
         result = []
